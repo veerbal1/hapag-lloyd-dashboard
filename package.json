@@ -1,30 +1,21 @@
 {
   "name": "hapag-lloyd-dashboard",
   "version": "1.0.0",
+  "author": "",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview --port 4173",
     "test:unit": "vitest --environment jsdom",
     "test:e2e": "start-server-and-test preview http://localhost:4173/ 'cypress open --e2e'",
-    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'",
-    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore",
+    "dev": "vite",
+    "preview": "vite preview --port 4173",
+    "test:e2e:ci": "start-server-and-test preview http://localhost:4173/ 'cypress run --e2e'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/veerbal1/hapag-lloyd-dashboard.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/veerbal1/hapag-lloyd-dashboard/issues"
-  },
-  "homepage": "https://github.com/veerbal1/hapag-lloyd-dashboard#readme",
   "dependencies": {
     "pinia": "^2.0.17",
     "vue": "^3.2.37",
-    "vue-router": "^4.1.3"
+    "vue-router": "^4.1.3",
+    "vuestic-ui": "^1.4.7"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.1.4",
@@ -40,6 +31,17 @@
     "sass": "^1.54.5",
     "start-server-and-test": "^1.14.0",
     "vite": "^3.0.4",
-    "vitest": "^0.21.0"
+    "vitest": "^0.21.0",
+    "vue-cli-plugin-vuestic-ui": "~1.0.8"
+  },
+  "bugs": {
+    "url": "https://github.com/veerbal1/hapag-lloyd-dashboard/issues"
+  },
+  "homepage": "https://github.com/veerbal1/hapag-lloyd-dashboard#readme",
+  "keywords": [],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veerbal1/hapag-lloyd-dashboard.git"
   }
 }
