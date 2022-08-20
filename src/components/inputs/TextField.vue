@@ -1,5 +1,5 @@
 <template>
-    <va-input class="mb-4" v-model="value" :placeholder="placeholder" :type="type"/>
+    <va-input class="mb-4" :placeholder="placeholder" :type="type"/>
 </template>
 
 <script>
