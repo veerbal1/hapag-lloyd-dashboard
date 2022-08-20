@@ -17,6 +17,7 @@
       <section id="right">
         <div id="right-content">
           <div id="right-content-header">
+            <hapag-form />
           </div>
         </div>
       </section>
@@ -25,8 +26,11 @@
 </template>
 
 <script>
+import HapagForm from './Form.vue'
 export default {
-
+  components: {
+    HapagForm
+  }
 }
 </script>
 
@@ -88,7 +92,7 @@ export default {
 
         #right-content {
           background-color: rgba($color: #E2E2E1, $alpha: 1.0);
-          width: 70%;
+          // width: 70%;
           backdrop-filter: blur(10px);
           border-radius: 5px;
           box-shadow: 0px 0px 10px rgba($color: #E2E2E1, $alpha: 0.5);
