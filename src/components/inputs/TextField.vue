@@ -1,22 +1,22 @@
 <template>
-    <input type="text">
+    <va-input class="mb-4" v-model="value" :placeholder="placeholder" :typeof="type"/>
 </template>
 
 <script>
 export default {
     name: 'TextField',
+    props: {
+        placeholder: {
+            type: String,
+            default: '',
+        },
+        type: {
+            type: String,
+            default: 'text',
+        },
+    },
 }
 </script>
 
 <style scoped>
-input {
-    width: 100%;
-    height: 100%;
-    border: none;
-    border-radius: 5px;
-    outline: none;
-    font-size: 1.5em;
-    font-weight: lighter;
-    padding: 0.2em;
-}
 </style>

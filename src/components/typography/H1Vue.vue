@@ -9,10 +9,11 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 h1 {
     text-transform: uppercase;
     font-weight: 700;
-    font-size:2em;
+    font-size: 2em;
+    margin-bottom: 0.5em;
 }
 </style>

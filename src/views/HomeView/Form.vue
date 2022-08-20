@@ -1,7 +1,9 @@
 <template>
     <div id="form">
         <H1Vue text="Welcome" />
-        <text-field />
+        <text-field placeholder="Email" type="text" />
+        <text-field placeholder="Password" type="password" />
+        <va-button color="warning" class="mr-4 mb-2" :rounded="false">Log In</va-button>
     </div>
 </template>
 
@@ -19,6 +21,10 @@ export default {
 
 <style>
 #form {
-    width: 100%
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
 }
 </style>
