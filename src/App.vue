@@ -6,7 +6,7 @@
 
 
 <script>
-import HomeView from './views/HomeView.vue'
+import HomeView from './views/HomeView/HomeView.vue'
 export default {
   components: {
     HomeView
