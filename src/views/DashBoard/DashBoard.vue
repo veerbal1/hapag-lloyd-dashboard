@@ -1,12 +1,14 @@
 <template>
-    <div>
-        <button
-            class="flex mx-auto text-white bg-indigo-500 border-0 py-2 px-8 focus:outline-none hover:bg-indigo-600 rounded text-lg">Button</button>
-    </div>
+    <Hapag-Header />
 </template>
 
-<script setup>
-
+<script>
+import HapagHeader from '../../components/Header/HeaderFile.vue'
+export default {
+    components: {
+        HapagHeader
+    }
+}
 </script>
 
 <style lang="scss" scoped>
