@@ -1,17 +1,28 @@
 <template>
     <div id="form">
-        <H1Vue text="Welcome" />
-        <text-field placeholder="Email" v-model="email" type="email" messages="Email: admin@hapag.co" />
-        <text-field placeholder="Password" v-model="password" type="password" messages="Password: 12345678" />
-        <va-button color="warning" class="mr-4 mb-2" :rounded="false" @click.prevent="submit">Log In</va-button>
-        <va-button v-show="false" color="warning" class="mr-4 mb-2" :rounded="false" loading size="medium">Log In
-        </va-button>
+        <div class="w-80 bg-white rounded-lg p-8 flex flex-col md:ml-auto w-full mt-10 md:mt-0 relative z-10 shadow-md">
+            <h2 class="text-gray-900 text-lg mb-1 font-medium title-font">Welcome</h2>
+            <p class="leading-relaxed mb-2 text-gray-600">
+                Login to your account to get started.
+            </p>
+            <div class="relative mb-4">
+                <label for="email" class="leading-7 text-sm text-gray-600">Email</label>
+                <input id="email" v-model="email" type="email"
+                    class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <div class="relative mb-4">
+                <label for="password" class="leading-7 text-sm text-gray-600">Password</label>
+                <input id="password" v-model="password" type="password"
+                    class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
+            </div>
+            <button @click.prevent="submit"
+                class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
+                style="background-color: var(--secondary);">Log In</button>
+        </div>
     </div>
 </template>
 
 <script>
-import TextField from '../../components/inputs/TextField.vue';
-import H1Vue from '../../components/typography/H1Vue.vue';
 export default {
     name: 'Hapag-Form',
     data() {
@@ -26,10 +37,7 @@ export default {
             this.$router.push('/dashboard');
         },
     },
-    components: {
-        TextField,
-        H1Vue,
-    }
+    components: {}
 }
 </script>
 

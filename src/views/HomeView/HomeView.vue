@@ -15,10 +15,8 @@
         </div>
       </section>
       <section id="right">
-        <div id="right-content">
-          <div id="right-content-header">
-            <hapag-form />
-          </div>
+        <div id="right-content" class="container px-5 py-24 mx-auto flex relative z-10">
+          <hapag-form />
         </div>
       </section>
     </div>
@@ -91,12 +89,12 @@ export default {
         justify-content: flex-end;
 
         #right-content {
-          background-color: rgba($color: #E2E2E1, $alpha: 1.0);
-          // width: 70%;
-          backdrop-filter: blur(10px);
-          border-radius: 5px;
-          box-shadow: 0px 0px 10px rgba($color: #E2E2E1, $alpha: 0.5);
-          padding: 1em;
+          // background-color: rgba($color: #E2E2E1, $alpha: 1.0);
+          // // width: 70%;
+          // backdrop-filter: blur(10px);
+          // border-radius: 5px;
+          // box-shadow: 0px 0px 10px rgba($color: #E2E2E1, $alpha: 0.5);
+          // padding: 1em;
         }
       }
     }
