@@ -16,7 +16,7 @@
                     class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
             <div v-show="!isValid" class="relative mb-4">
-                <h6 class="leading-relaxed text-red-800 text-xs">Email or Password is incorrect</h6>
+                <h6 class="leading-relaxed text-red-500 text-xs">Email or Password is incorrect</h6>
             </div>
             <button @click.prevent="submit"
                 class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
