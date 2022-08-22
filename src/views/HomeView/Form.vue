@@ -15,9 +15,12 @@
                 <input id="password" v-model="password" type="password"
                     class="w-full bg-white rounded border border-gray-300 focus:border-indigo-500 focus:ring-2 focus:ring-indigo-200 text-base outline-none text-gray-700 py-1 px-3 leading-8 transition-colors duration-200 ease-in-out">
             </div>
+            <div v-show="!isValid" class="relative mb-4">
+                <h6 class="leading-relaxed text-red-800 text-xs">Email or Password is incorrect</h6>
+            </div>
             <button @click.prevent="submit"
                 class="text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded text-lg"
-                style="background-color: var(--secondary);">Log In</button>
+                style="background-color: var(--secondary);">{{ isLoading ? 'Loading...' : 'Log In' }}</button>
         </div>
     </div>
 </template>
@@ -27,6 +30,8 @@ export default {
     name: 'Hapag-Form',
     data() {
         return {
+            isLoading: false,
+            isValid: true,
             email: 'admin@hapag.co',
             password: '12345678',
         };
@@ -34,8 +39,28 @@ export default {
     methods: {
         submit() {
             console.log('Submit');
-            this.$router.push('/dashboard');
+            if (this.validateCredentials()) {
+                this.isValid = true;
+                this.isLoading = true;
+                setTimeout(() => {
+                    this.isLoading = false;
+                    this.$router.push('/dashboard');
+                }, 1000);
+            } else {
+                this.isValid = false;
+                return;
+            }
         },
+        validateCredentials() {
+            return this.validateEmail(this.email) && String(this.email).trim() === "admin@hapag.co" && String(this.password).trim() === "12345678";
+        },
+        validateEmail(email) {
+            return String(email)
+                .toLowerCase()
+                .match(
+                    /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                );
+        }
     },
     components: {}
 }
