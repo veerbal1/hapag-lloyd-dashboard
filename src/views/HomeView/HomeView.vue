@@ -3,11 +3,11 @@
     <div id="content">
       <section id="left">
         <div id="left-content">
-          <div id="left-content-header">
+          <div id="left-content-header" class="drop-shadow-md">
             <img src="../../assets/images/logo.png" alt="">
           </div>
           <div id="left-content-body">
-            <p>
+            <p class="drop-shadow-md">
               <!-- Container shipping company. It drive world economy-->
               We <span>drive</span><br /> world's <span>economy.</span>
             </p>
@@ -36,7 +36,7 @@ export default {
 #main {
   width: 100vw;
   height: 100vh;
-  background-image: url('../../assets/images/bg2.jpeg');
+  background-image: url('../../assets/images/bg2.webp');
   background-position: top;
   background-size: cover;
   display: flex;
