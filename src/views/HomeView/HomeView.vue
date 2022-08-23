@@ -87,15 +87,6 @@ export default {
         display: flex;
         align-items: center;
         justify-content: flex-end;
-
-        #right-content {
-          // background-color: rgba($color: #E2E2E1, $alpha: 1.0);
-          // // width: 70%;
-          // backdrop-filter: blur(10px);
-          // border-radius: 5px;
-          // box-shadow: 0px 0px 10px rgba($color: #E2E2E1, $alpha: 0.5);
-          // padding: 1em;
-        }
       }
     }
   }
