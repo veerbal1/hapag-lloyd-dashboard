@@ -3,7 +3,7 @@
     <div class="w-full p-4 flex" style="gap:1em;flex:1">
         <section id="left" class="flex-col" style="display:flex;flex: 0 0 auto;">
             <card title="Balance" value="312,312" secondaryTitle="Average Monthly" secondaryValue="336,699" />
-            <card title="Active Order" value="Crankshaft CNC" secondaryTitle="Charges" secondaryValue="450" />
+            <card title="Recent Order" value="Crankshaft CNC" secondaryTitle="Charges" secondaryValue="450" />
         </section>
         <section id="right" style="gap:1em;flex:8">
             <section id="right-top">

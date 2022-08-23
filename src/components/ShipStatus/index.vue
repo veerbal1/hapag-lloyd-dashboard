@@ -5,6 +5,11 @@
                 Crankshaft CNC
             </span>
         </h4>
+        <h4 class="font-normal w-full text-left mb-4">Expected Delivery:
+            <span class="font-semibold">
+                8-10 September, 2022
+            </span>
+        </h4>
         <div class="w-full flex justify-center items-center">
             <h3 class="font-sm font-normal">Germany</h3>
             <div class="w-full mx-3 relative flex items-center">
