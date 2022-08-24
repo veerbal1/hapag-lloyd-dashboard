@@ -9,7 +9,7 @@
           <div id="left-content-body">
             <p class="drop-shadow-md">
               <!-- Container shipping company. It drive world economy-->
-              We <span>drive</span><br /> world's <span>economy.</span>
+              We <span>drive</span><br /> world's <span>economy</span>
             </p>
           </div>
         </div>
