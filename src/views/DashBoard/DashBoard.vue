@@ -9,6 +9,7 @@
         <section id="right" style="gap:1em;flex:8">
             <section id="right-top">
                 <ship-status />
+                <no-of-goods-chart />
             </section>
             <section id="right-bottom"></section>
         </section>
@@ -20,12 +21,14 @@ import HapagHeader from '../../components/Header/HeaderFile.vue';
 import Card from '../../components/Cards/index.vue';
 import ShipStatus from '../../components/ShipStatus/index.vue';
 import CategoryChart from '../../components/Cards/CategoryChart.vue'
+import NoOfGoodsChart from '../../components/Charts/NoOfGoodsChart.vue'
 export default {
     components: {
         Card,
         HapagHeader,
         ShipStatus,
-        CategoryChart
+        CategoryChart,
+        NoOfGoodsChart
     },
 }
 </script>
