@@ -19,7 +19,7 @@ export default {
                 labels: ['Pharmaceutical Products', 'Fruits', 'Paints', 'Juices', 'Dry Fruits'],
                 datasets: [{
                     label: '# of Votes',
-                    data: [1, 19, 3, 5, 2],
+                    data: [3204, 6379, 8985, 12182, 14018],
                     backgroundColor: ['#EE6082', '#F49E3F', '#F9CC53', '#52C0C0', '#339AF7'],
                     borderWidth: 1
                 }]
