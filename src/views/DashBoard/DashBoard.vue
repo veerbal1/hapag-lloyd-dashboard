@@ -3,7 +3,8 @@
     <div class="w-full p-4 flex" style="gap:1em;flex:1">
         <section id="left" class="flex-col" style="display:flex;flex: 0 0 auto;">
             <card title="Balance" value="€ 246,810" secondaryTitle="Average Monthly" secondaryValue="336,699" />
-            <card title="Recent Order" value="Crankshaft CNC" secondaryTitle="Charges" secondaryValue="450 incl. Taxes" />
+            <card title="Recent Order" value="Crankshaft CNC" secondaryTitle="Charges"
+                secondaryValue="450 incl. Taxes" />
             <category-chart />
         </section>
         <section id="right" style="gap:1em;flex:8">
@@ -15,6 +16,7 @@
             <section id="right-bottom"></section>
         </section>
     </div>
+    <Hapag-Footer />
 </template>
 
 <script>
@@ -24,6 +26,7 @@ import ShipStatus from '../../components/ShipStatus/index.vue';
 import CategoryChart from '../../components/Cards/CategoryChart.vue';
 import NoOfGoodsChart from '../../components/Charts/NoOfGoodsChart.vue';
 import OrdersTable from '../../components/Tables/OrdersTable.vue';
+import HapagFooter from '../../components/Footer/FooterFile.vue';
 export default {
     components: {
         Card,
@@ -31,7 +34,8 @@ export default {
         ShipStatus,
         CategoryChart,
         NoOfGoodsChart,
-        OrdersTable
+        OrdersTable,
+        HapagFooter
     },
     data: () => {
         return {
