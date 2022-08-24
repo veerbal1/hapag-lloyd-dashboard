@@ -19,50 +19,19 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+                    <tr v-for="order in orders" :key="order.id"
+                        class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
                         <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Kuka 5 Axis Robotic Arm
+                            {{ order.name }}
                         </th>
                         <td class="py-4 px-6">
-                            Machines
+                            {{ order.category }}
                         </td>
                         <td class="py-4 px-6">
-                            22 Aug, 2022
+                            {{ order.orderDate }}
                         </td>
                         <td class="py-4 px-6" align="right">
-                            <button type="button"
-                                class="py-2 px-3 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Check
-                                Status</button>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            Audi A6 Left Steering Dashboard
-                        </th>
-                        <td class="py-4 px-6">
-                            Machines
-                        </td>
-                        <td class="py-4 px-6">
-                            18 Aug, 2022
-                        </td>
-                        <td class="py-4 px-6" align="right">
-                            <button type="button"
-                                class="py-2 px-3 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Check
-                                Status</button>
-                        </td>
-                    </tr>
-                    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
-                        <th scope="row" class="py-4 px-6 font-medium text-gray-900 whitespace-nowrap dark:text-white">
-                            BMW Auto-Transmission Gear Kit
-                        </th>
-                        <td class="py-4 px-6">
-                            Machines
-                        </td>
-                        <td class="py-4 px-6">
-                            15 Aug, 2022
-                        </td>
-                        <td class="py-4 px-6" align="right">
-                            <button type="button"
+                            <button type="button" @click="checkStatus(order)"
                                 class="py-2 px-3 text-xs font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Check
                                 Status</button>
                         </td>
@@ -75,7 +44,20 @@
 
 <script>
 export default {
-    name: "OrdersTable"
+    name: "OrdersTable",
+    props: {
+        orders: {
+            type: Array,
+            required: true
+        }
+    },
+    emits: ["check-status"],
+    methods: {
+        checkStatus(order) {
+            // emit an event to check the status of the order
+            this.$emit("check-status", order);
+        }
+    }
 }
 </script>
 

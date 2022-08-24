@@ -2,28 +2,35 @@
     <div class="w-full p-6 relative flex flex-col justify-center items-center">
         <h4 class="font-normal w-full text-left mb-4">Order status:
             <span class="font-semibold">
-                Crankshaft CNC
+                {{ order.name }}
             </span>
         </h4>
         <h4 class="font-normal w-full text-left mb-4">Expected Delivery:
             <span class="font-semibold">
-                8-10 September, 2022
+                {{ order.expectedDeliveryDate }}
             </span>
         </h4>
         <div class="w-full flex justify-center items-center">
-            <h3 class="font-sm font-normal">Germany</h3>
+            <h3 class="font-sm font-normal">{{
+                    order.shipFrom
+            }}</h3>
             <div class="w-full mx-3 relative flex items-center">
                 <hr class="w-full border-solid border-2 border-indigo-800 rounded-xl" />
                 <div id="dot" class="absolute w-6 h-6 rounded-full right-0 transition-all"></div>
             </div>
-            <h3 class="font-sm font-normal">India</h3>
+            <h3 class="font-sm font-normal">{{order.shipTo}}</h3>
         </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: 'ShipStatus'
+    name: 'ShipStatus',
+    props: {
+        'order': {
+            type: Object,
+        }
+    }
 }
 </script>
 

@@ -8,9 +8,9 @@
         </section>
         <section id="right" style="gap:1em;flex:8">
             <section id="right-top">
-                <ship-status />
+                <ship-status :order="orderStatusCheck" />
                 <no-of-goods-chart />
-                <orders-table />
+                <orders-table :orders="orderInfo" @check-status="checkStatus" />
             </section>
             <section id="right-bottom"></section>
         </section>
@@ -33,6 +33,41 @@ export default {
         NoOfGoodsChart,
         OrdersTable
     },
+    data: () => {
+        return {
+            orderInfo: [{
+                id: 1,
+                name: 'Kuka 5 Axis Robotic Arm',
+                category: 'Machines',
+                orderDate: '22 Aug, 2022',
+                expectedDeliveryDate: '29 Sep, 2022',
+                shipFrom: 'Germany',
+                shipTo: 'India',
+            }, {
+                id: 2,
+                name: 'Audi A6 Left Steering Dashboard',
+                category: 'Machines',
+                orderDate: '18 Aug, 2022',
+                expectedDeliveryDate: '25 Sep, 2022',
+                shipFrom: 'Switzerland',
+                shipTo: 'Germany',
+            }],
+            orderStatusCheck: {
+                id: 1,
+                name: 'Kuka 5 Axis Robotic Arm',
+                category: 'Machines',
+                orderDate: '22 Aug, 2022',
+                expectedDeliveryDate: '29 Sep, 2022',
+                shipFrom: 'France',
+                shipTo: 'Denmark',
+            }
+        }
+    },
+    methods: {
+        checkStatus(order) {
+            this.orderStatusCheck = order;
+        }
+    }
 }
 </script>
 
