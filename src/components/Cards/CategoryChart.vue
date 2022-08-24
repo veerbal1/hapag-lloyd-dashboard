@@ -16,7 +16,7 @@ export default {
         new Chart(ctx, {
             type: 'doughnut',
             data: {
-                labels: ['Pharmaceutical Products', 'Fruits', 'Paints', 'Juices', 'Dry Fruits'],
+                labels: ['Pharmaceutical Products', 'Fruits', 'Paints', 'CNC Machines', 'Dry Fruits'],
                 datasets: [{
                     label: '# of Votes',
                     data: [3204, 6379, 8985, 12182, 14018],

@@ -33,7 +33,7 @@ export default {
                     borderColor: '#F9CC53',
                     backgroundColor: "#F9CC53"
                 }, {
-                    label: 'Juices',
+                    label: 'CNC Machines',
                     data: [942, 911, 570, 490, 273, 844, 638, 382, 0, 0, 0, 0],
                     borderColor: '#52C0C0',
                     backgroundColor: "#52C0C0"
@@ -43,6 +43,19 @@ export default {
                     borderColor: '#339AF7',
                     backgroundColor: "#339AF7"
                 }]
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    },
+                    title: {
+                        display: true,
+                        text: 'No. of Containers ordered - Category Wise',
+                        position: "top"
+                    }
+                }
             },
         })
     }
