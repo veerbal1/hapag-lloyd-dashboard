@@ -57,13 +57,13 @@ export default {
                 shipTo: 'Germany',
             }],
             orderStatusCheck: {
-                id: 1,
-                name: 'Kuka 5 Axis Robotic Arm',
+                id: 2,
+                name: 'Audi A6 Left Steering Dashboard',
                 category: 'Machines',
-                orderDate: '19 Aug, 2022',
-                expectedDeliveryDate: '26 Aug, 2022',
-                shipFrom: 'Germany',
-                shipTo: 'India',
+                orderDate: '18 Aug, 2022',
+                expectedDeliveryDate: '29 Sep, 2022',
+                shipFrom: 'Switzerland',
+                shipTo: 'Germany',
             }
         }
     },
@@ -71,6 +71,12 @@ export default {
         checkStatus(order) {
             this.orderStatusCheck = order;
         }
+    },
+    mounted() {
+        setTimeout(() => {
+            this.orderStatusCheck = this.orderInfo[0];
+        }, 1000);
+        console.log(this.orderInfo);
     }
 }
 </script>
