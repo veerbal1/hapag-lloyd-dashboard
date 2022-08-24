@@ -1,5 +1,5 @@
 <template>
-    <div class="relative mt-8 flex flex-col justify-center items-center w-full">
+    <div class="w-full p-6 relative flex flex-col justify-center items-center">
         <h4 class="font-normal w-full text-left mb-4">Order status:
             <span class="font-semibold">
                 Crankshaft CNC
