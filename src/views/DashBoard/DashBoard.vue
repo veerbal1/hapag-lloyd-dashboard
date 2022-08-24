@@ -10,6 +10,7 @@
             <section id="right-top">
                 <ship-status />
                 <no-of-goods-chart />
+                <orders-table />
             </section>
             <section id="right-bottom"></section>
         </section>
@@ -20,15 +21,17 @@
 import HapagHeader from '../../components/Header/HeaderFile.vue';
 import Card from '../../components/Cards/index.vue';
 import ShipStatus from '../../components/ShipStatus/index.vue';
-import CategoryChart from '../../components/Cards/CategoryChart.vue'
-import NoOfGoodsChart from '../../components/Charts/NoOfGoodsChart.vue'
+import CategoryChart from '../../components/Cards/CategoryChart.vue';
+import NoOfGoodsChart from '../../components/Charts/NoOfGoodsChart.vue';
+import OrdersTable from '../../components/Tables/OrdersTable.vue';
 export default {
     components: {
         Card,
         HapagHeader,
         ShipStatus,
         CategoryChart,
-        NoOfGoodsChart
+        NoOfGoodsChart,
+        OrdersTable
     },
 }
 </script>
