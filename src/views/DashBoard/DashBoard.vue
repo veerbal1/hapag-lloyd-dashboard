@@ -49,21 +49,21 @@ export default {
                 shipTo: 'India',
             }, {
                 id: 2,
-                name: 'Audi A6 Left Steering Dashboard',
+                name: 'Audi A6 Gearbox Assembly Kit',
                 category: 'Machines',
                 orderDate: '18 Aug, 2022',
                 expectedDeliveryDate: '29 Sep, 2022',
-                shipFrom: 'Switzerland',
-                shipTo: 'Germany',
+                shipFrom: 'Germany',
+                shipTo: 'Switzerland',
             }],
             orderStatusCheck: {
                 id: 2,
-                name: 'Audi A6 Left Steering Dashboard',
+                name: 'Audi A6 Gearbox Assembly Kit',
                 category: 'Machines',
                 orderDate: '18 Aug, 2022',
                 expectedDeliveryDate: '29 Sep, 2022',
-                shipFrom: 'Switzerland',
-                shipTo: 'Germany',
+                shipFrom: 'Germany',
+                shipTo: 'Switzerland',
             }
         }
     },
